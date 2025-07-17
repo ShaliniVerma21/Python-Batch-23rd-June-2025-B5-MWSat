@@ -2,13 +2,13 @@
 
 ![Python Programming](https://github.com/user-attachments/assets/b23f3e39-f3be-41ab-ae8c-e53c37c9ce80)
 
-> 🎓 A complete roadmap to becoming a **Python Developer** or **Data Analyst** with real-world projects, guided sessions, and hands-on experience — starting **10th June 2025**.
+> 🎓 A complete roadmap to becoming a **Python Developer** or **Data Analyst** with real-world projects, guided sessions, and hands-on experience — starting **23rd-June 2025**.
 
 ---
 
 ## 📘 Overview
 
-Welcome to the **Python-Programming-Batch-10th-June-2025**!  
+Welcome to the **Python-Programming-Batch-23rd-June-2025**!  
 This repository is your go-to learning hub for mastering **Python programming** from scratch to advanced level with a focus on **Data Analytics**, **Software Development**, and **Automation**.
 
 You'll find:
