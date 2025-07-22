@@ -6,6 +6,344 @@ Syntax:
 dict_name = {key1: value1, key2: value2, ...}
 """
 
+# 1. Empty dictionary
+empty_dict = {}
+print(empty_dict)
+
+# 2. Simple dictionary
+student = {'name': 'Anil', 'age': 21, 'grade': 'A'}
+print(student)
+
+# 3. Product dictionary
+product = {'Laptop': 50000, 'Mouse': 700}
+print(product)
+
+# 4. Marks dictionary
+marks = {'Math': 85, 'Science': 92}
+print(marks)
+
+# 5. Boolean values
+status = {'loggedIn': True, 'verified': False}
+print(status)
+
+# 6. List as value
+hobbies = {'Rahul': ['Reading', 'Gaming']}
+print(hobbies)
+
+# 7. Nested dictionary
+employee = {'HR': {'count': 5}, 'IT': {'count': 10}}
+print(employee)
+
+# 8. Mix value types
+data = {'name': 'Reena', 'score': 88, 'pass': True}
+print(data)
+
+# 9. Using int keys
+room = {1: 'Occupied', 2: 'Vacant'}
+print(room)
+
+# 10. Duplicate keys (last one overrides)
+test = {'a': 10, 'a': 20}
+print(test)
+
+# 11. Using tuple as key
+location = {(10.5, 20.6): "Point A"}
+print(location)
+
+# 12. Mobile brand info
+mobile = {'brand': 'Samsung', 'model': 'A52', 'price': 25000}
+print(mobile)
+
+# 13. Game info
+game = {'name': 'Chess', 'players': 2}
+print(game)
+
+# 14. Using strings as keys
+info = {'Name': 'Amit', 'City': 'Delhi'}
+print(info)
+
+# 15. Language usage
+lang = {'Python': 'Web', 'C++': 'Game Dev'}
+print(lang)
+
+# 16. College details
+college = {'name': 'ABC University', 'rank': 5}
+print(college)
+
+# 17. Car info
+car = {'make': 'Honda', 'year': 2020}
+print(car)
+
+# 18. City population
+population = {'Mumbai': 20000000, 'Pune': 7000000}
+print(population)
+
+# 19. Sports and coach
+sports = {'Cricket': 'Ravi', 'Hockey': 'Surjit'}
+print(sports)
+
+# 20. Food calories
+food = {'Apple': 95, 'Banana': 105}
+print(food)
+
+# 21. Student marksheet
+marksheet = {'Roll': 101, 'Name': 'Meena', 'Marks': 85}
+print(marksheet)
+
+# 22. Devices and quantity
+inventory = {'Laptop': 10, 'Monitor': 5}
+print(inventory)
+
+# 23. Profile with address
+profile = {'name': 'Pooja', 'address': {'city': 'Indore', 'pincode': 452001}}
+print(profile)
+
+# 24. Social media stats
+stats = {'likes': 230, 'shares': 45}
+print(stats)
+
+# 25. Festival dates
+festivals = {'Holi': 'March', 'Diwali': 'November'}
+print(festivals)
+
+
+#2. CREATING DICTIONARIES
+""" 
+You can create dictionaries using different techniques like:
+
+{} literal
+dict() constructor
+zip() function
+Dictionary comprehension
+Tuples/lists
+"""
+
+# 1. Using dict() constructor
+user = dict(name='Anil', age=24)
+print(user)
+
+# 2. From list of tuples
+employee = dict([('name', 'Rita'), ('age', 30)])
+print(employee)
+
+# 3. Using zip()
+keys = ['Math', 'Science']
+values = [95, 90]
+result = dict(zip(keys, values))
+print(result)
+
+# 4. Comprehension - squares
+squares = {x: x*x for x in range(1, 6)}
+print(squares)
+
+# 5. Nested using dict()
+nested = dict(A=dict(x=1), B=dict(x=2))
+print(nested)
+
+# 6. From 2 lists
+names = ['A', 'B', 'C']
+scores = [80, 85, 90]
+students = dict(zip(names, scores))
+print(students)
+
+# 7. Default value using comprehension
+defaults = {k: 0 for k in ['a', 'b', 'c']}
+print(defaults)
+
+# 8. Characters count using comprehension
+string = 'data'
+count = {ch: string.count(ch) for ch in string}
+print(count)
+
+# 9. Using range keys
+range_dict = {x: chr(65 + x) for x in range(5)}
+print(range_dict)
+
+# 10. Key from tuple list
+tlist = [('x', 10), ('y', 20)]
+t_dict = dict(tlist)
+print(t_dict)
+
+# 11. Boolean keys
+b_dict = {True: "Yes", False: "No"}
+print(b_dict)
+
+# 12. Multiple ways combined
+d = dict(zip(['a', 'b'], [1, 2]))
+d.update({'c': 3})
+print(d)
+
+# 13. Using dict with keyword args
+profile = dict(name='Aarti', country='India')
+print(profile)
+
+# 14. Initializing with None
+blank = dict.fromkeys(['x', 'y', 'z'])
+print(blank)
+
+# 15. From user input
+data = dict([('name', input("Enter name: ")), ('city', input("Enter city: "))])
+print(data)
+
+# 16. Using map
+keys = ['p', 'q']
+values = list(map(int, ['10', '20']))
+m_dict = dict(zip(keys, values))
+print(m_dict)
+
+# 17. String to dictionary using split
+info = 'name:Raj,age:25'
+data = dict(item.split(':') for item in info.split(','))
+print(data)
+
+# 18. ASCII mapping
+ascii_dict = {chr(i): i for i in range(65, 71)}
+print(ascii_dict)
+
+# 19. Word length mapping
+words = ['apple', 'banana']
+length_dict = {w: len(w) for w in words}
+print(length_dict)
+
+# 20. Mapping even numbers
+evens = {x: 'even' for x in range(10) if x % 2 == 0}
+print(evens)
+
+# 21. Creating a timetable
+timetable = dict(zip(['Monday', 'Tuesday'], ['Math', 'Science']))
+print(timetable)
+
+# 22. Using tuple unpack
+pairs = [(1, 'one'), (2, 'two')]
+pair_dict = dict(pairs)
+print(pair_dict)
+
+# 23. Integer keys and string values
+num_map = {i: str(i) for i in range(5)}
+print(num_map)
+
+# 24. Course & instructor
+course = dict(Python='Shalini', SQL='Rahul')
+print(course)
+
+# 25. Custom mapping
+data = dict(((x, x*10) for x in range(1, 6)))
+print(data)
+
+
+#3. ACCESSING & MODIFYING DICTIONARIES
+""" 
+You can access and update dictionary values using:
+
+Brackets []
+.get() method
+.update(), .setdefault()
+.pop(), .clear()
+Looping through .items(), .keys(), .values()
+"""
+
+# 1. Access using key
+person = {'name': 'Ajay'}
+print(person['name'])
+
+# 2. Use get() safely
+print(person.get('age', 'Not found'))
+
+# 3. Modify existing key
+person['name'] = 'Vijay'
+print(person)
+
+# 4. Add new key
+person['age'] = 30
+print(person)
+
+# 5. Using update()
+person.update({'city': 'Delhi'})
+print(person)
+
+# 6. setdefault() if not exists
+person.setdefault('state', 'Delhi')
+print(person)
+
+# 7. Remove key using pop()
+removed = person.pop('state')
+print("Removed:", removed)
+
+# 8. Loop through items
+for k, v in person.items():
+    print(k, v)
+
+# 9. Check key presence
+if 'city' in person:
+    print("City exists")
+
+# 10. Access all keys
+print(person.keys())
+
+# 11. Access all values
+print(person.values())
+
+# 12. Use popitem()
+last_item = person.popitem()
+print("Popped:", last_item)
+
+# 13. Use clear()
+person.clear()
+print(person)
+
+# 14. Merge dictionaries
+a = {'x': 1}
+b = {'y': 2}
+a.update(b)
+print(a)
+
+# 15. Access nested key
+company = {'IT': {'emp': 10}}
+print(company['IT']['emp'])
+
+# 16. Modify nested value
+company['IT']['emp'] = 20
+print(company)
+
+# 17. Convert keys to list
+print(list(company.keys()))
+
+# 18. Count values > 90
+marks = {'A': 91, 'B': 89, 'C': 95}
+count = sum(1 for m in marks.values() if m > 90)
+print("Count > 90:", count)
+
+# 19. Use dictionary in if-else
+user = {'role': 'admin'}
+if user.get('role') == 'admin':
+    print("Access granted")
+
+# 20. Copy dictionary
+copied = user.copy()
+print(copied)
+
+# 21. Check value in dictionary
+if 'admin' in user.values():
+    print("Role is admin")
+
+# 22. Combine using dict unpacking
+merged = {**a, **b}
+print(merged)
+
+# 23. Update using loop
+for k in marks:
+    marks[k] += 5
+print(marks)
+
+# 24. Delete key
+del marks['B']
+print(marks)
+
+# 25. Dictionary as function input
+def greet(info):
+    return f"Hi {info['name']}!"
+print(greet({'name': 'Shalini'}))
+
 
 # 4. Dictionary Methods
 
@@ -407,3 +745,67 @@ print("Total:", sum(trips.values()))
 # 25. Subscription renewal tracker
 subscriptions = {"Netflix": "2025-01-01", "Spotify": "2024-12-31"}
 print(subscriptions.get("Spotify"))
+
+""" 
+Scenario: Analyzing Sales Data of a Retail Store
+
+Goal: Analyze product sales, quantities, and revenue using dictionary operations.
+"""
+
+#Step 1: Define Product Data
+
+# Dictionary storing product data
+sales_data = {
+    'Laptop': {'price': 55000, 'units_sold': 8},
+    'Mouse': {'price': 500, 'units_sold': 45},
+    'Keyboard': {'price': 1000, 'units_sold': 30},
+    'Monitor': {'price': 12000, 'units_sold': 10},
+    'USB Drive': {'price': 800, 'units_sold': 60}
+}
+
+# Step 2: Total Revenue Generated
+
+total_revenue = 0
+
+for product, info in sales_data.items():
+    revenue = info['price'] * info['units_sold']
+    total_revenue += revenue
+    print(f"{product} -> Revenue: ₹{revenue}")
+
+print(f"\nTotal Revenue: ₹{total_revenue}")
+
+
+#Step 3: Find Top-Selling Product
+
+top_product = ''
+max_units = 0
+
+for product, info in sales_data.items():
+    if info['units_sold'] > max_units:
+        max_units = info['units_sold']
+        top_product = product
+
+print(f"\nTop-Selling Product: {top_product} ({max_units} units sold)")
+
+
+# Step 4: Add New Product Stock
+
+# Adding a new product dynamically
+sales_data['Webcam'] = {'price': 2500, 'units_sold': 12}
+print("\nNew Product Added: Webcam")
+
+
+# Step 5: Apply Discount on Low-Selling Products
+
+# Apply 10% discount if units_sold < 20
+for product in sales_data:
+    if sales_data[product]['units_sold'] < 20:
+        old_price = sales_data[product]['price']
+        sales_data[product]['price'] = int(old_price * 0.9)  # Apply 10% discount
+        print(f"Discount applied to {product}: Old ₹{old_price} -> New ₹{sales_data[product]['price']}")
+
+# Step 6: Report Summary
+
+print("\n--- Final Product Summary ---")
+for product, info in sales_data.items():
+    print(f"{product} - Price: ₹{info['price']}, Units Sold: {info['units_sold']}")
