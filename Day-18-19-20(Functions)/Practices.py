@@ -1392,4 +1392,122 @@ length_data = {word: len(word) for word in sentence.split()}
 print("Word Lengths:", length_data)
 
 
+
 #Section 10: 1 Complete & detailed Real  Situation based Data Analysis Example(including data types, operators, loops, control structures, list, set, dict, tuples, functions) 
+
+# ===============================
+# Sales Data Analysis System
+# ===============================
+
+# Sample Sales Dataset
+# Each transaction: (Product, Price, Quantity, Salesperson)
+sales_data = [
+    ("Laptop", 50000, 2, "Rahul"),
+    ("Mobile", 15000, 5, "Shalini"),
+    ("Tablet", 20000, 3, "Amit"),
+    ("Laptop", 50000, 1, "Shalini"),
+    ("Headphones", 2000, 10, "Rahul"),
+    ("Charger", 800, 15, "Amit"),
+    ("Mobile", 15000, 2, "Rahul"),
+    ("Laptop", 50000, 1, "Amit"),
+    ("Tablet", 20000, 1, "Shalini"),
+    ("Headphones", 2000, 5, "Rahul")
+]
+
+# ===============================
+# 1. Total Sales Revenue
+# ===============================
+def total_revenue(data):
+    total = 0
+    for product, price, qty, person in data:
+        total += price * qty
+    return total
+
+print("1. Total Sales Revenue:", total_revenue(sales_data))
+
+# ===============================
+# 2. Best Selling Product
+# ===============================
+def best_selling_product(data):
+    product_sales = {}
+    for product, price, qty, person in data:
+        product_sales[product] = product_sales.get(product, 0) + qty
+    best_product = max(product_sales, key=product_sales.get)
+    return best_product, product_sales[best_product]
+
+best_product, qty = best_selling_product(sales_data)
+print("2. Best Selling Product:", best_product, "with", qty, "units")
+
+# ===============================
+# 3. Sales Per Salesperson
+# ===============================
+def sales_by_person(data):
+    person_sales = {}
+    for product, price, qty, person in data:
+        revenue = price * qty
+        person_sales[person] = person_sales.get(person, 0) + revenue
+    return person_sales
+
+print("3. Sales Per Salesperson:", sales_by_person(sales_data))
+
+# ===============================
+# 4. Average Sales Per Transaction
+# ===============================
+def average_sales(data):
+    total = total_revenue(data)
+    return total / len(data)
+
+print("4. Average Sales Per Transaction:", average_sales(sales_data))
+
+# ===============================
+# 5. Unique Products Sold (Set Example)
+# ===============================
+def unique_products(data):
+    return set([product for product, price, qty, person in data])
+
+print("5. Unique Products Sold:", unique_products(sales_data))
+
+# ===============================
+# 6. Using Lambda & map (Total per transaction)
+# ===============================
+transaction_totals = list(map(lambda x: x[1] * x[2], sales_data))
+print("6. Transaction Totals:", transaction_totals)
+
+# ===============================
+# 7. Recursive Function (Factorial of total transactions)
+# ===============================
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    return n * factorial(n-1)
+
+print("7. Factorial of Number of Transactions:", factorial(len(sales_data)))
+
+# ===============================
+# 8. Tuple Example (Packing & Unpacking)
+# ===============================
+def product_summary(product, total_qty, revenue):
+    return (product, total_qty, revenue)
+
+# Example for Laptop
+laptop_sales = [x for x in sales_data if x[0] == "Laptop"]
+qty_sum = sum(x[2] for x in laptop_sales)
+revenue_sum = sum(x[1] * x[2] for x in laptop_sales)
+
+summary_tuple = product_summary("Laptop", qty_sum, revenue_sum)
+print("8. Tuple Example (Laptop Summary):", summary_tuple)
+
+# ===============================
+# 9. Conditional Logic (Sales Performance)
+# ===============================
+def performance_check(person_sales):
+    for person, revenue in person_sales.items():
+        if revenue > 100000:
+            print(person, "→ Excellent Performance 💯")
+        elif revenue > 50000:
+            print(person, "→ Good Performance 👍")
+        else:
+            print(person, "→ Needs Improvement ⚠️")
+
+print("\n9. Salesperson Performance:")
+performance_check(sales_by_person(sales_data))
