@@ -188,6 +188,8 @@ output_file = os.path.join(base_path, "results.csv")  # CSV output file
 # - select columns: Math (2), Science (3), English (4)
 # ------------------------------------------------------------------
 data = np.loadtxt(csv_file, delimiter=",", skiprows=1, usecols=(2, 3, 4))
+# Load columns 2,3,4 safely even if there are missing values
+#data = np.genfromtxt(csv_file, delimiter=",", skip_header=1, usecols=(2, 3, 4))
 print("\n--- Program 1: Load CSV (Numeric Only) ---")
 print("Data from CSV:\n", data)
 print("Shape of data (rows, columns):", data.shape)  # Extra functionality
@@ -246,3 +248,4 @@ fmt='%0.2f'
 
 print("\n--- Program 4: Save Results ---")
 print(f"Results saved successfully to {output_file}")
+
