@@ -1,0 +1,37 @@
+[
+    {
+        "Name":"Amit",
+        "Age":25,
+        "Department":"HR",
+        "Salary":40000,
+        "City":"Delhi"
+    },
+    {
+        "Name":"Ravi",
+        "Age":30,
+        "Department":"IT",
+        "Salary":50000,
+        "City":"Mumbai"
+    },
+    {
+        "Name":"Neha",
+        "Age":22,
+        "Department":"Finance",
+        "Salary":45000,
+        "City":"Chennai"
+    },
+    {
+        "Name":"Priya",
+        "Age":24,
+        "Department":"IT",
+        "Salary":48000,
+        "City":"Pune"
+    },
+    {
+        "Name":"Raj",
+        "Age":21,
+        "Department":"HR",
+        "Salary":42000,
+        "City":"Delhi"
+    }
+]
